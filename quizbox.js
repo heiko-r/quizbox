@@ -57,6 +57,7 @@ function Quizbox(element, question, answers) {
             target.classList.remove("quizbox-correct");
             target.classList.add("quizbox-wrong");
         }
+        this.noteElement.classList.remove("quizbox-note-hidden");
     }
     
     
@@ -105,5 +106,14 @@ function Quizbox(element, question, answers) {
         this.checkElement.innerHTML = "Check";
         this.checkElement.addEventListener("click", this.clickcheck);
         this.element.appendChild(this.checkElement);
+    }
+    
+    /* Note */
+    if ("note" in this.question) {
+        this.noteElement = document.createElement("div");
+        this.noteElement.classList.add("quizbox-note");
+        this.noteElement.classList.add("quizbox-note-hidden");
+        this.noteElement.innerHTML = this.question.note;
+        this.element.appendChild(this.noteElement);
     }
 }

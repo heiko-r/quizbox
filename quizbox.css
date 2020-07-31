@@ -15,7 +15,7 @@
     width: 100%;
 }
 
-.quizbox-answer, .quizbox-check {
+.quizbox-answer, .quizbox-check, .quizbox-note {
     margin-top: 1rem;
     padding: 0.8rem;
     border-radius: 0.5rem;
@@ -54,4 +54,10 @@
 /* these elements are white, cannot apply brightness filter */
 .quizbox-answer:not(.quizbox-chosen):hover, .quizbox-check:not(.quizbox-correct):not(.quizbox-wrong):hover {
     background-color: #CCCCCC;
+}
+
+.quizbox-note {
+}
+.quizbox-note-hidden {
+    display: none;
 }
