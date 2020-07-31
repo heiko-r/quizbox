@@ -1,0 +1,57 @@
+.quizbox-container {
+    text-align: center;
+}
+
+.quizbox-question {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.quizbox-question-has-image {
+    width: 100%;
+}
+.quizbox-question-text {
+}
+.quizbox-question-image {
+    width: 100%;
+}
+
+.quizbox-answer, .quizbox-check {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    border: solid 1px black;
+}
+
+.quizbox-answer {
+}
+.quizbox-answer-has-image {
+    display: inline-block;
+    text-align: center;
+}
+.quizbox-answer-text {
+}
+.quizbox-answer-image {
+    width: 200px;
+}
+.quizbox-chosen {
+    background-color: #A0A0A0;
+}
+
+.quizbox-check {
+    clear: both;
+}
+.quizbox-correct {
+    background-color: green;
+}
+.quizbox-wrong {
+    background-color: red;
+}
+
+/* darken existing colour */
+.quizbox-wrong:hover, .quizbox-correct:hover, .quizbox-chosen:hover {
+    filter: brightness(80%);
+}
+/* these elements are white, cannot apply brightness filter */
+.quizbox-answer:not(.quizbox-chosen):hover, .quizbox-check:not(.quizbox-correct):not(.quizbox-wrong):hover {
+    background-color: #CCCCCC;
+}
